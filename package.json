@@ -1,0 +1,37 @@
+{
+  "name": "@ksyun/parcel-plugin-vdt",
+  "version": "0.0.1",
+  "description": "A plugin to load vdt file for parcel.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksc-fe/parcel-plugin-vdt.git"
+  },
+  "keywords": [
+    "parcel",
+    "vdt"
+  ],
+  "author": "Javey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ksc-fe/parcel-plugin-vdt/issues"
+  },
+  "homepage": "https://github.com/ksc-fe/parcel-plugin-vdt#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
+    "@babel/preset-stage-0": "^7.0.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "intact": "^2.3.7",
+    "kpc": "^0.5.15",
+    "parcel-bundler": "^1.10.3",
+    "stylus": "^0.54.5"
+  }
+}

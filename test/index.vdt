@@ -1,0 +1,6 @@
+import {Button, ButtonGroup} from 'kpc';
+
+<ButtonGroup>
+    <Button ev-click={self._onClick}>test</Button>
+    <Button>test1</Button>
+</ButtonGroup>
