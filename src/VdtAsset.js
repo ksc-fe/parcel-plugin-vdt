@@ -1,5 +1,4 @@
 const JSAsset = require('parcel-bundler/src/assets/JSAsset');
-const {Asset} = require('parcel-bundler');
 
 let Vdt;
 try {
@@ -7,14 +6,11 @@ try {
     Vdt = require('intact').Vdt;
 } catch (e) {
     Vdt = require('vdt');
+} finally {
+    console.error('You must install vdt or intact. Please run: npm install intact.');
 }
 
 class VdtAsset extends JSAsset {
-    // constructor(...args) {
-        // super(...args);
-        // this.type = 'js';
-    // }
-
     async loadIfNeeded() {
         if (this.contents == null) {
             const options = Object.assign({
@@ -36,36 +32,6 @@ class VdtAsset extends JSAsset {
             this.contents = contents;
         }
     }
-
-    // async parse(code) {
-
-        // return await super.parse(content); 
-    // }
-
-    // async generate() {
-        // console.log(this.ast);
-
-        // // const options = Object.assign({
-            // // noWith: true, 
-            // // onlySource: true, 
-            // // delimiters: ['{', '}'],
-            // // sourceMap: false,
-            // // // sourceMap: this.sourceMap
-        // // });
-
-
-        // // const fn = Vdt.compile(this.contents, options);
-        // // const head = fn.head || '';
-        // // let content = 'export default ' + fn.source;
-        // // if (head) {
-            // // content = head + content;
-        // // }
-
-        // return [{
-            // type: 'js',
-            // value: content 
-        // }];
-    // }
 }
 
 module.exports = VdtAsset;
